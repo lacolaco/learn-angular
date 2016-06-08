@@ -1,0 +1,29 @@
+<h1>Hello {{ name }}</h1>
+
+<input type="checkbox" [(ngModel)]="checked">
+<p *ngIf="checked">Hello</p>
+<p [class.red]="checked">チェックで赤くなるよ</p>
+
+<ul>
+  <li *ngFor="let person of personList">
+    {{ person.name }}
+  </li>
+</ul>
+
+<select [(ngModel)]="selected">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="X">X</option>
+</select>
+
+<div [ngSwitch]="selected">
+  <div *ngSwitchWhen="'A'">
+    <h1>Aだよ！！！！</h1>
+  </div>
+  <div *ngSwitchWhen="'B'">
+    <h1>Bだよ！！！！</h1>
+  </div>
+  <div *ngSwitchDefault>
+    <h1>AでもBでもないよ！！！！</h1>
+  </div>
+</div>
