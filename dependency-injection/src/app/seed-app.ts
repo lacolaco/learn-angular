@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { HTTP_PROVIDERS } from '@angular/http';
 
 import { UserListComponent } from './user-list/user-list';
-import { UserService } from './user-service';
+import { UserService, MOCK_USERS_TOKEN } from './user-service';
+import { HttpUserService } from './http-user-service';
 
 @Component({
   selector: 'seed-app',
@@ -13,7 +15,14 @@ import { UserService } from './user-service';
   <user-list></user-list>
   `,
   providers: [
-    UserService
+    HTTP_PROVIDERS, 
+    {
+      provide: MOCK_USERS_TOKEN,
+      useValue: [
+        { name: 'モックユーザーです' }
+      ]
+    },
+    UserService,
   ]
 })
 export class SeedApp {

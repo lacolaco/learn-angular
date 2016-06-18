@@ -8,15 +8,21 @@ import { UserService } from '../user-service';
     <ul>
         <li *ngFor="let user of users">{{ user.name }}</li>
     </ul>  
-    `
+    `,
+    providers: [
+    ]
 })
 export class UserListComponent {
     users = [];
-
-    constructor(private userService: UserService) {
+    userService: UserService;
+    constructor(userService: UserService) {
+        this.userService = userService;
     }
 
     ngOnInit() {
-        this.users = this.userService.list();
+        this.userService.list()
+            .then(users => {
+                this.users = users;
+            });
     }
 }

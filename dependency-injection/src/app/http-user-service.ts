@@ -7,11 +7,10 @@ import { User } from './user-model';
 export class HttpUserService {
 
     constructor(private http: Http) {
-
     }
 
     list(): Promise<User[]> {
-        return this.http.get('data/users.json')
+        return this.http.get('app/data/users.json')
             .toPromise()
             .then(resp => {
                 return resp.json() as User[];
