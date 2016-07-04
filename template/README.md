@@ -28,7 +28,7 @@ Built-in Pipes
   directives: [
   ],
   template: `
-  <h1>Template</h1>  
+  <h1>Forms</h1>  
   <p>{{ text | uppercase}}</p>
   <p>{{ text | replace:'foo':'bar' }}</p>
   <p>{{ num | number:'3.1-3' }}</p>
