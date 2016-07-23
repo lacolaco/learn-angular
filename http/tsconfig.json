@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "dist",
+    "rootDir": ".",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node"
+  },
+  "files": [
+    "node_modules/@types/node/index.d.ts",
+    "node_modules/typescript/lib/lib.es6.d.ts",
+    "src/app.ts",
+    "src/app/app.component.ts",
+    "src/polyfills.ts",
+    "src/vendor.ts"
+  ]
+}
