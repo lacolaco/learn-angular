@@ -4,17 +4,20 @@
     "target": "es5",
     "outDir": "dist",
     "rootDir": ".",
-    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node"
   },
+  "exclude": [
+    "node_modules"
+  ],
   "files": [
-    "node_modules/@types/node/index.d.ts",
-    "node_modules/typescript/lib/lib.es6.d.ts",
     "src/app.ts",
     "src/app/app.component.ts",
+    "src/app/data.service.ts",
     "src/polyfills.ts",
-    "src/vendor.ts"
+    "src/vendor.ts",
+    "node_modules/@types/node/index.d.ts",
+    "node_modules/typescript/lib/lib.es6.d.ts"
   ]
 }

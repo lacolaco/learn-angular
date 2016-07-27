@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "description": "Angular 2 learning",
   "scripts": {
-    "build": "webpack --inline --colors --progress --display-error-details --display-cached",
+    "build": "webpack --inline --colors",
     "watch": "npm run build -- --watch",
-    "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
+    "server": "webpack-dev-server --inline --colors --port 3000  --content-base src",
     "start": "npm run server"
   },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^4.0.30",
-    "awesome-typescript-loader": "~0.16.2",
-    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2",
     "typescript": "~1.8.9",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0",
