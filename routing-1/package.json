@@ -5,13 +5,15 @@
   "scripts": {
     "build": "webpack --inline --colors",
     "watch": "npm run build -- --watch",
-    "server": "webpack-dev-server --inline --colors --port 3000  --content-base src",
+    "server": "webpack-dev-server --inline --colors --port 3000 --content-base src",
+    "prestart": "tsconfig -u",
     "start": "npm run server"
   },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^4.0.30",
     "ts-loader": "^0.8.2",
+    "tsconfig-cli": "^2.0.0",
     "typescript": "~1.8.9",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0",
