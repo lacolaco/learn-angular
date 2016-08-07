@@ -15,6 +15,10 @@
     "files": [
         "src/app.ts",
         "src/app/app.component.ts",
+        "src/app/app.routes.ts",
+        "src/app/detail-root.component.ts",
+        "src/app/detail.component.ts",
+        "src/app/home.component.ts",
         "src/polyfills.ts",
         "src/vendor.ts",
         "node_modules/@types/node/index.d.ts",
